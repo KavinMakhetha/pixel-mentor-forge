@@ -51,7 +51,7 @@ function Results() {
         <p className="text-[13px] font-bold">Topic performance</p>
         <div className="mt-3 space-y-2.5">{topics.map((t) => <Bar key={t.t} label={t.t} value={t.v} />)}</div>
         <p className="mt-3 text-[12px] leading-relaxed text-muted-foreground">
-          {weak.length ? `Strong in ${topics[0].t}. Focus your revision on ${weak.map((w) => w.t).join(", ")}.` : "Excellent work across every topic — try a harder level next."}
+          {weak.length ? `Strong in ${topics[0]?.t}. Focus your revision on ${weak.map((w) => w.t).join(", ")}.` : "Excellent work across every topic — try a harder level next."}
         </p>
         <Link to="/test" className="bg-brand mt-3 block rounded-2xl py-3 text-center text-[13px] font-extrabold">Generate Practice Test From My Weak Areas</Link>
       </div>

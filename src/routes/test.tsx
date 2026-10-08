@@ -22,7 +22,7 @@ function TakeTest() {
   const exam = sampleExam;
   const [i, setI] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const q = exam.questions[i];
+  const q = exam.questions[i]!;
   const last = i === exam.questions.length - 1;
 
   return (
